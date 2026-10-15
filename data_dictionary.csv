@@ -1,0 +1,64 @@
+column,description,type
+respondent_id,Sequential row number (not the survey interview key),int64
+county,County of residence (47 counties),str
+map_location,County name formatted for Power BI map geocoding,str
+area_type,Rural or Urban cluster,str
+sex,Sex of respondent,str
+age_group,Age group of respondent (adults 18+ only),str
+age,Age in completed years,int64
+education,Highest education level; 'Not stated' when missing,str
+wealth_quintile,Household wealth quintile from the survey; 'Not stated' when missing,str
+livelihood,Main livelihood category,str
+marital_status,Marital status,str
+id_card,"Owns a national ID, passport or alien ID",str
+age_group_sort,Sort-order helper: use 'Sort by column' in Power BI,int64
+wealth_quintile_sort,Sort-order helper: use 'Sort by column' in Power BI,int64
+education_sort,Sort-order helper: use 'Sort by column' in Power BI,int64
+weight,Individual survey weight (sum = adult population represented). ALWAYS use for percentages,float64
+access_level,"Detailed access strand: Formal Prudential / Non-Prudential / Registered, Informal, Excluded",str
+access_group,Formal / Informal only / Excluded (matches the published topline split),str
+credit_barrier,Main barrier to credit; 'None reported' for 0 (may include people not asked),str
+formal_access,1 if uses formal financial services,int64
+informal_only,1 if uses informal services only,int64
+excluded,1 if uses no financial services,int64
+mobile_money,1 if has accessed mobile money on own phone,int64
+mobile_ownership,1 if owns a mobile phone (primary ownership),int64
+digital_account,1 if uses a digital account,int64
+bank_use,1 if uses a bank (incl. mobile banking providers regulated by CBK),int64
+sacco_use,1 if uses a SACCO,int64
+microfinance_use,1 if uses microfinance,int64
+savings_any,1 if saves anywhere,int64
+savings_formal,1 if saves with a formal provider,int64
+savings_informal,1 if saves informally,int64
+loan_any,1 if has a loan (current or last 12 months),int64
+loan_formal,1 if has a formal loan,int64
+loan_informal,1 if has an informal loan,int64
+fuliza,1 if used a Fuliza overdraft loan in the last 12 months,int64
+hustler_fund,1 if took a Hustler Fund loan in the last 12 months,int64
+mobile_banking_loan,1 if took a mobile banking loan in the last 12 months,int64
+digital_app_loan,1 if took a digital app loan in the last 12 months,int64
+digital_credit_any,"1 if used any digital credit (Fuliza, apps, Hustler Fund, mobile banking, digital MFIs)",int64
+insurance_any,1 if has insurance including NHIF,int64
+financially_healthy,1 if classed as financially healthy by the survey index,int64
+w_formal_access,weight x formal_access (sum / sum of weight = weighted share),float64
+w_informal_only,weight x informal_only (sum / sum of weight = weighted share),float64
+w_excluded,weight x excluded (sum / sum of weight = weighted share),float64
+w_mobile_money,weight x mobile_money (sum / sum of weight = weighted share),float64
+w_mobile_ownership,weight x mobile_ownership (sum / sum of weight = weighted share),float64
+w_digital_account,weight x digital_account (sum / sum of weight = weighted share),float64
+w_bank_use,weight x bank_use (sum / sum of weight = weighted share),float64
+w_sacco_use,weight x sacco_use (sum / sum of weight = weighted share),float64
+w_microfinance_use,weight x microfinance_use (sum / sum of weight = weighted share),float64
+w_savings_any,weight x savings_any (sum / sum of weight = weighted share),float64
+w_savings_formal,weight x savings_formal (sum / sum of weight = weighted share),float64
+w_savings_informal,weight x savings_informal (sum / sum of weight = weighted share),float64
+w_loan_any,weight x loan_any (sum / sum of weight = weighted share),float64
+w_loan_formal,weight x loan_formal (sum / sum of weight = weighted share),float64
+w_loan_informal,weight x loan_informal (sum / sum of weight = weighted share),float64
+w_fuliza,weight x fuliza (sum / sum of weight = weighted share),float64
+w_hustler_fund,weight x hustler_fund (sum / sum of weight = weighted share),float64
+w_mobile_banking_loan,weight x mobile_banking_loan (sum / sum of weight = weighted share),float64
+w_digital_app_loan,weight x digital_app_loan (sum / sum of weight = weighted share),float64
+w_digital_credit_any,weight x digital_credit_any (sum / sum of weight = weighted share),float64
+w_insurance_any,weight x insurance_any (sum / sum of weight = weighted share),float64
+w_financially_healthy,weight x financially_healthy (sum / sum of weight = weighted share),float64

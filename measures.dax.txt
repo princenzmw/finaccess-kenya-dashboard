@@ -1,0 +1,35 @@
+// Paste each measure into Power BI: Modeling > New measure. Table name used below: Survey
+// All percentages use survey weights. Never use plain COUNTROWS for percentages.
+
+Respondents (n) = COUNTROWS(Survey)
+Adults represented (M) = DIVIDE(SUM(Survey[weight]), 1000000)
+
+Formal access % = DIVIDE(SUM(Survey[w_formal_access]), SUM(Survey[weight]))
+Informal only % = DIVIDE(SUM(Survey[w_informal_only]), SUM(Survey[weight]))
+Excluded % = DIVIDE(SUM(Survey[w_excluded]), SUM(Survey[weight]))
+Excluded adults (M) = DIVIDE(SUM(Survey[w_excluded]), 1000000)
+
+Mobile money % = DIVIDE(SUM(Survey[w_mobile_money]), SUM(Survey[weight]))
+Bank use % = DIVIDE(SUM(Survey[w_bank_use]), SUM(Survey[weight]))
+SACCO use % = DIVIDE(SUM(Survey[w_sacco_use]), SUM(Survey[weight]))
+Savings % = DIVIDE(SUM(Survey[w_savings_any]), SUM(Survey[weight]))
+Any loan % = DIVIDE(SUM(Survey[w_loan_any]), SUM(Survey[weight]))
+Fuliza % = DIVIDE(SUM(Survey[w_fuliza]), SUM(Survey[weight]))
+Hustler Fund % = DIVIDE(SUM(Survey[w_hustler_fund]), SUM(Survey[weight]))
+Mobile banking loan % = DIVIDE(SUM(Survey[w_mobile_banking_loan]), SUM(Survey[weight]))
+App loan % = DIVIDE(SUM(Survey[w_digital_app_loan]), SUM(Survey[weight]))
+Digital credit % = DIVIDE(SUM(Survey[w_digital_credit_any]), SUM(Survey[weight]))
+Financially healthy % = DIVIDE(SUM(Survey[w_financially_healthy]), SUM(Survey[weight]))
+
+// Gap versus the national figure, in percentage points (clears every filter on the Survey table)
+Formal gap vs national (pp) = ([Formal access %] - CALCULATE([Formal access %], ALL(Survey))) * 100
+
+// Share of all (filtered) adults reporting each credit barrier. Use with a visual filter: credit_barrier is not "None reported"
+Barrier share of adults = DIVIDE(SUM(Survey[weight]), CALCULATE(SUM(Survey[weight]), ALL(Survey[credit_barrier])))
+
+// Reliability flag for small groups (smallest county has 149 respondents)
+Sample note = IF([Respondents (n)] < 250, "Small sample: interpret with caution", "")
+
+// Dynamic titles
+Title Counties = "Formal access ranges from " & FORMAT(MINX(VALUES(Survey[county]), [Formal access %]), "0%") & " to " & FORMAT(MAXX(VALUES(Survey[county]), [Formal access %]), "0%") & " across counties"
+Title Overview = FORMAT([Formal access %], "0.0%") & " of Kenyan adults use formal financial services; " & FORMAT([Excluded %], "0.0%") & " are excluded"
