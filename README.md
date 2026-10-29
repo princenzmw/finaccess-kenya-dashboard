@@ -11,3 +11,7 @@ Prepared from the FinAccess Household Survey 2024 (CBK, KNBS, FSD Kenya): https:
 
 Always weight percentages (`w_x` / `weight`). Unweighted formal access is 85.7 %, the correct weighted figure is 84.8 %.
 Cite the survey as the source on the dashboard. Check the survey site's terms of use before sharing the data publicly.
+
+---
+
+Published the Report publicly at: [Report](https://app.powerbi.com/view?r=eyJrIjoiYTJjMDVkMmUtZGYxMC00ZTExLTlhZGEtYjcyZTZiNjk1YzhkIiwidCI6IjE2ZDgzZWU2LTI1NGEtNDY5ZC1hNmNjLTU0ZTJjYTIzMTNlNyIsImMiOjh9&embedImagePlaceholder=true&pageName=a09621f88fac873c711f)
