@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="260" viewBox="0 0 900 260" role="img" aria-label="FinAccess Kenya 2024 Streaming ETL and Reconciled Findings">
+  <rect x="0.5" y="0.5" width="899" height="259" rx="12" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+
+  <text x="28" y="34" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="700">FinAccess 2024 Pipeline &amp; Verified Weighted Findings</text>
+  <rect x="706" y="17" width="166" height="24" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="789" y="33" text-anchor="middle" fill="#10b981" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="10.5" font-weight="600">CBK · KNBS · FSD KENYA</text>
+  <line x1="28" y1="50" x2="872" y2="50" stroke="#21262d" stroke-width="1"/>
+
+  <rect x="28" y="68" width="192" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="42" y="93" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">1. Raw Survey .xlsx</text>
+  <text x="42" y="116" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">290 MB (3 GB XML)</text>
+
+  <line x1="224" y1="101" x2="246" y2="101" stroke="#38bdf8" stroke-width="2"/>
+  <polygon points="246,96 254,101 246,106" fill="#38bdf8"/>
+
+  <rect x="258" y="68" width="192" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="272" y="93" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">2. XML Streamer</text>
+  <text x="272" y="116" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">16 MB chunks · 36 vars</text>
+
+  <line x1="454" y1="101" x2="476" y2="101" stroke="#38bdf8" stroke-width="2"/>
+  <polygon points="476,96 484,101 476,106" fill="#38bdf8"/>
+
+  <rect x="488" y="68" width="192" height="66" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="502" y="93" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">3. Weighted Schema</text>
+  <text x="502" y="116" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">8 MB CSV · 19,750 x 63</text>
+
+  <line x1="684" y1="101" x2="706" y2="101" stroke="#10b981" stroke-width="2"/>
+  <polygon points="706,96 714,101 706,106" fill="#10b981"/>
+
+  <rect x="718" y="68" width="154" height="66" rx="8" fill="#0f2922" stroke="#10b981" stroke-width="1"/>
+  <text x="732" y="93" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" font-weight="700">4. Topline Gate</text>
+  <text x="732" y="116" fill="#cbd5e1" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">84.8% matched</text>
+
+  <rect x="28" y="156" width="200" height="78" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="44" y="187" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700">28.1M Adults</text>
+  <text x="44" y="213" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">Weighted population sum</text>
+
+  <rect x="244" y="156" width="200" height="78" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="260" y="187" fill="#f0f6fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700">84.8% / 9.9%</text>
+  <text x="260" y="213" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">Formal vs excluded (wt.)</text>
+
+  <rect x="460" y="156" width="200" height="78" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="476" y="187" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700">48.5% to 94.0%</text>
+  <text x="476" y="213" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">45-pt gap across 47 counties</text>
+
+  <rect x="676" y="156" width="196" height="78" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+  <text x="692" y="187" fill="#f59e0b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" font-weight="700">63% vs 5%</text>
+  <text x="692" y="213" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="11">Excluded (No ID vs Has ID)</text>
+</svg>

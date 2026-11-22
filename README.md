@@ -1,10 +1,18 @@
 # FinAccess Kenya 2024: Financial Inclusion Dashboard
 
+[![FinAccess CI](https://img.shields.io/github/actions/workflow/status/princenzmw/finaccess-kenya-dashboard/ci.yml?branch=main&style=flat-square&label=CI&logo=githubactions&logoColor=white)](https://github.com/princenzmw/finaccess-kenya-dashboard/actions/workflows/ci.yml)
+
 Weighted county-level analysis of Kenya's 2024 FinAccess Household Survey (CBK, KNBS, and FSD Kenya), paired with a streaming Python ETL pipeline and a 5-page Power BI model.
 
 - [Live Power BI Report](https://app.powerbi.com/view?r=eyJrIjoiYTJjMDVkMmUtZGYxMC00ZTExLTlhZGEtYjcyZTZiNjk1YzhkIiwidCI6IjE2ZDgzZWU2LTI1NGEtNDY5ZC1hNmNjLTU0ZTJjYTIzMTNlNyIsImMiOjh9&embedImagePlaceholder=true&pageName=a09621f88fac873c711f)
 - [Case Study on nzamuwe.com](https://nzamuwe.com/projects/finaccess)
 - [Source Survey Dataset (KNBS)](https://finaccess.knbs.or.ke/reports-and-datasets)
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/pipeline-overview-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/pipeline-overview-light.svg" />
+  <img src="./assets/pipeline-overview-light.svg" alt="FinAccess 2024 Streaming ETL Pipeline and Verified Findings" />
+</picture>
 
 ## Why this pipeline exists
 
@@ -32,7 +40,7 @@ Before finishing, the script checks weighted headline aggregates against the pub
 1. Download the FinAccess 2024 Household Survey workbook from [KNBS](https://finaccess.knbs.or.ke/reports-and-datasets) (check the survey site's terms of use before redistributing raw data).
 2. Install Python dependencies:
    ```bash
-   pip install pandas openpyxl
+   pip install -r requirements.txt
    ```
 3. Run the streaming ETL script (takes ~30 seconds):
    ```bash
@@ -44,6 +52,14 @@ The script writes four files to `output/` (not committed to git to respect surve
 - `output/dim_county.csv`: 47 counties with geocoded `map_location` labels and respondent sample sizes.
 - `output/data_dictionary.csv`: generated column dictionary.
 - `output/reconciliation.csv`: weighted aggregates compared against published FinAccess 2024 toplines.
+
+## Running tests
+
+```bash
+pip install -r requirements.txt -r requirements-dev.txt
+ruff check .
+pytest -v
+```
 
 ## Usage notes
 

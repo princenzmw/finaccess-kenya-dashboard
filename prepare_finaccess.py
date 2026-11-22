@@ -11,7 +11,6 @@ Needs:  pandas, openpyxl (pip install pandas openpyxl)
 from __future__ import annotations
 
 import argparse
-import csv
 import re
 import time
 import xml.etree.ElementTree as ET
